@@ -19,7 +19,7 @@ import javax.persistence.Query;
  */
 public class Main {
 
-    private static final String PERSISTENCE_UNIT_NAME = "todos";
+    private static final String PERSISTENCE_UNIT_NAME = "mediaPU";
 
     private static EntityManagerFactory factory;
 
@@ -27,10 +27,10 @@ public class Main {
         EntityManager em = getEntityManager();
         em.getTransaction().begin();
 //        createDummyImages(em);
-//        showImages(em);
+        showImages(em);
 //        showLicenses(em);
-        Licence license = getLicense(em, "CC BY-SA");
-        System.out.println("licence is " + license);
+//        Licence license = getLicense(em, "CC BY-SA");
+//        System.out.println("licence is " + license);
 //        createDummyImages(em);
 //        showEmp(em);
 //        Image image = getImage(em, "citronfjäril");

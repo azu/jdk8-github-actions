@@ -53,8 +53,8 @@ public class Image implements Serializable {
             joinColumns = { @JoinColumn(name = "IMAGE_ID")},
             inverseJoinColumns = { @JoinColumn(name = "LICENCE_ID")})
     private Set<Licence> licenses = new HashSet<>();
-
-    public Image() {
+ 
+   public Image() {
     }
 
     public Image(String title, String copyrightOwner) {
