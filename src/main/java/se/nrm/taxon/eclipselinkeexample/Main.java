@@ -74,7 +74,7 @@ public class Main {
     private static boolean linkImageWithLicence(EntityManager em, String licenseAbbr, String imageTitle) {
         Licence license = getLicense(em, licenseAbbr);
         Image image = getImage(em, imageTitle);
-        image.getMeetings().add(license);
+        image.getLicenses().add(license);
         em.merge(image);
         return true;
     }
@@ -106,7 +106,7 @@ public class Main {
         List<Image> list = q.getResultList();
         for (Image image : list) {
             System.out.println(image.getTitle());
-            Set<Licence> lic = image.getMeetings();
+            Set<Licence> lic = image.getLicenses();
             for (Licence meeting : lic) {
                 System.out.println("--" + meeting.getAbbrev());
             }

@@ -54,7 +54,7 @@ public class Image implements Serializable {
                 @JoinColumn(name = "IMAGE_ID")},
             inverseJoinColumns = {
                 @JoinColumn(name = "LICENCE_ID")})
-    private Set<Licence> meetings = new HashSet<>();
+    private Set<Licence> licenses = new HashSet<>();
 
     public Image() {
     }
@@ -88,16 +88,18 @@ public class Image implements Serializable {
         this.copyrightOwner = copyrightOwner;
     }
 
-    public Set<Licence> getMeetings() {
-        return meetings;
+    public Set<Licence> getLicenses() {
+        return licenses;
     }
 
-    public void setMeetings(Set<Licence> meetings) {
-        this.meetings = meetings;
+    public void setLicenses(Set<Licence> licenses) {
+        this.licenses = licenses;
     }
+
 
      @Override
     public String toString() {
-        return "[ id=" + this.imageId + " ]" + "[ title=" + this.title + " ]";
+        return "[ id=" + this.imageId + " ]" + "[ title=" + this.title + " ]" 
+                + "[ nr of licences := " + this.licenses.size() + " ]";
     }
 }
