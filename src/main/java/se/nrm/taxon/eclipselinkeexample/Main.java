@@ -36,7 +36,7 @@ public class Main {
         Image image = getImage(em, "citronfjäril");
         System.out.println(image);
         
-        boolean linkImageWithLicence = linkImageWithLicence(em, "CC BY-SA", "citronfjäril");
+//        boolean linkImageWithLicence = linkImageWithLicence(em, "CC BY-SA", "citronfjäril");
         em.getTransaction().commit();
         em.close();
     }

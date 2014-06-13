@@ -98,6 +98,6 @@ public class Image implements Serializable {
 
      @Override
     public String toString() {
-        return "[ id=" + this.imageId + " ]" + "[ abbrev=" + this.title + " ]";
+        return "[ id=" + this.imageId + " ]" + "[ title=" + this.title + " ]";
     }
 }
