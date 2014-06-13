@@ -50,10 +50,8 @@ public class Image implements Serializable {
 
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(name = "IMAGE_X_LICENSE",
-            joinColumns = {
-                @JoinColumn(name = "IMAGE_ID")},
-            inverseJoinColumns = {
-                @JoinColumn(name = "LICENCE_ID")})
+            joinColumns = { @JoinColumn(name = "IMAGE_ID")},
+            inverseJoinColumns = { @JoinColumn(name = "LICENCE_ID")})
     private Set<Licence> licenses = new HashSet<>();
 
     public Image() {

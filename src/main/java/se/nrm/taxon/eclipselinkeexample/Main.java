@@ -29,14 +29,14 @@ public class Main {
 //        createDummyImages(em);
 //        showImages(em);
 //        showLicenses(em);
-//        Licence license = getLicense(em, "CC BY-SA");
-//        System.out.println("licence is "+license);
+        Licence license = getLicense(em, "CC BY-SA");
+        System.out.println("licence is " + license);
 //        createDummyImages(em);
 //        showEmp(em);
-        Image image = getImage(em, "citronfjäril");
-        System.out.println(image);
+//        Image image = getImage(em, "citronfjäril");
+//        System.out.println(image);
         
-//        boolean linkImageWithLicence = linkImageWithLicence(em, "CC BY-SA", "citronfjäril");
+//        boolean linkImageWithLicence = linkImageWithLicence(em, "CC BY-SA", "sorgmantel");
         em.getTransaction().commit();
         em.close();
     }

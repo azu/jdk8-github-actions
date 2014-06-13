@@ -6,12 +6,15 @@
 package se.nrm.taxon.eclipselinkeexample;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -25,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "licence")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name =  Licence.FIND_ALL, query = "SELECT l FROM Licence l"),
+    @NamedQuery(name = Licence.FIND_ALL, query = "SELECT l FROM Licence l"),
     @NamedQuery(name = "Licence.findById", query = "SELECT l FROM Licence l WHERE l.id = :id"),
     @NamedQuery(name = Licence.LICENCE_BY_ABBREV, query = "SELECT l FROM Licence l WHERE l.abbrev = :abbrev"),
     @NamedQuery(name = "Licence.findByIssuer", query = "SELECT l FROM Licence l WHERE l.issuer = :issuer"),
@@ -36,6 +39,7 @@ public class Licence implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public static final String LICENCE_BY_ABBREV = "Licence.findByAbbrev";
+
     public static final String FIND_ALL = "Licence.findAll";
 
     @Id
@@ -55,6 +59,9 @@ public class Licence implements Serializable {
 
     @Column(name = "name")
     private String name;
+
+    @ManyToMany(mappedBy = "licenses")
+    private Set<Image> images = new HashSet<>();
 
     public Licence() {
     }
@@ -107,6 +114,14 @@ public class Licence implements Serializable {
         this.name = name;
     }
 
+    public Set<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(Set<Image> images) {
+        this.images = images;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -129,7 +144,7 @@ public class Licence implements Serializable {
 
     @Override
     public String toString() {
-        return "[ id=" + id + " ]" + "[ abbrev=" + abbrev + " ]";
+        return "[ id=" + id + " ]" + "[ abbrev=" + abbrev + " ]" + "[ nr of images :=" + images.size() + " ]";
     }
 
 }
