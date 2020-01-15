@@ -25,3 +25,5 @@ jobs:
           java-version: 8
       - name: install
         run: npm install && mvn install
+      - name: version
+        run: npm -v && /usr/libexec/java_home -V
