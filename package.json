@@ -1,0 +1,23 @@
+{
+  "name": "jdk8-github-actions",
+  "version": "1.0.0",
+  "description": "jdk8-github-actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/azu/jdk8-github-actions.git"
+  },
+  "keywords": [],
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/jdk8-github-actions/issues"
+  },
+  "homepage": "https://github.com/azu/jdk8-github-actions#readme",
+  "devDependencies": {
+    "mocha": "^7.0.0"
+  }
+}
