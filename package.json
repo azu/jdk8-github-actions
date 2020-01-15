@@ -6,6 +6,12 @@
   "jdeploy": {
     "jar": "target/EclipseLinkeExample-1.0-SNAPSHOT.jar"
   },
+  "files": [
+    "jdeploy-buddle"
+  ],
+  "bin": {
+    "command": "jdeploy-bundle/jdeploy.js"
+  },
   "scripts": {
     "package": "mvn clean package && jdeploy package",
     "release": "jdeploy publish"
@@ -24,5 +30,8 @@
   "devDependencies": {
     "jdeploy": "^1.0.21",
     "mocha": "^7.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
