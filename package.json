@@ -1,6 +1,6 @@
 {
   "name": "@azu/jdk8-github-actions",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "jdk8-github-actions",
   "main": "index.js",
   "jdeploy": {
