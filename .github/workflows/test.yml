@@ -27,3 +27,16 @@ jobs:
         run: npm install && mvn install
       - name: version
         run: npm -v && java -version
+      # Publish to registry if the version is not published
+      - name: publish
+        run: npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Push tag to GitHub if the version's tag is not tagged
+      - name: package-version-to-git-tag
+        uses: azu/action-package-version-to-git-tag@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_repo: ${{ github.repository }}
+          git_commit_sha: ${{ github.sha }}
+          git_tag_prefix: ""
