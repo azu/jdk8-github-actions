@@ -14,7 +14,7 @@
   },
   "scripts": {
     "package": "mvn clean package && jdeploy package",
-    "release": "mvn clean package && jdeploy publish"
+    "release": "npm run package && jdeploy publish"
   },
   "repository": {
     "type": "git",
