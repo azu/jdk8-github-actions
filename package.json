@@ -14,7 +14,7 @@
   },
   "scripts": {
     "package": "mvn clean package && jdeploy package",
-    "release": "jdeploy publish"
+    "release": "mvn clean package && jdeploy publish"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,8 @@
   "publishConfig": {
     "access": "restricted",
     "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.3"
   }
 }
