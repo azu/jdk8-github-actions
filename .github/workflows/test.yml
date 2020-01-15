@@ -26,7 +26,11 @@ jobs:
       - name: install
         run: npm install && mvn install
       - name: version
-        run: npm -v && java -version
+        run: |
+            npm -v
+            java -version
+            cat ~/.npmrc
+            cat .npmrc
       # Publish to registry if the version is not published
       - name: publish
         run: npm run release
