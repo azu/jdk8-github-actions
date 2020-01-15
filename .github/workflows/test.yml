@@ -29,6 +29,8 @@ jobs:
         run: |
             npm -v
             java -version
+            npm run package
+            tree
       # Publish to registry if the version is not published
       - name: publish
         run: |
