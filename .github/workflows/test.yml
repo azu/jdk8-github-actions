@@ -29,8 +29,6 @@ jobs:
         run: |
             npm -v
             java -version
-            cat ~/.npmrc
-            cat .npmrc
       # Publish to registry if the version is not published
       - name: publish
         run: npm run release

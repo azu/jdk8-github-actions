@@ -1,5 +1,5 @@
 {
-  "name": "jdk8-github-actions",
+  "name": "@azu/jdk8-github-actions",
   "version": "1.0.0",
   "description": "jdk8-github-actions",
   "main": "index.js",
@@ -32,6 +32,7 @@
     "mocha": "^7.0.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/azu"
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
   }
 }
