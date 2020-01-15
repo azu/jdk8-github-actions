@@ -29,9 +29,6 @@ jobs:
         run: |
             npm -v
             java -version
-            npm run package
-            ls jdeploy-bundle
-            ls target
       # Publish to registry if the version is not published
       - name: publish
         run: |

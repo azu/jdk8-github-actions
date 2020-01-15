@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "description": "jdk8-github-actions",
   "main": "index.js",
-  "jdeploy": {
+  "jDeploy": {
     "jar": "target/EclipseLinkeExample-1.0-SNAPSHOT.jar"
   },
   "files": [
