@@ -3,8 +3,8 @@
   "version": "1.3.0",
   "description": "jdk8-github-actions",
   "main": "index.js",
-  "jDeploy": {
-    "jar": "target/EclipseLinkeExample-1.0-SNAPSHOT.jar"
+  "jdeploy": {
+    "jar": "target/example-1.0.jar"
   },
   "bin": {
     "command": "jdeploy-bundle/jdeploy.js"
