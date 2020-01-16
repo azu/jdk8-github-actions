@@ -6,6 +6,7 @@
   "jdeploy": {
     "jar": "target/example-1.0.jar"
   },
+  "files": ["jdeploy-bundle"],
   "bin": {
     "command": "jdeploy-bundle/jdeploy.js"
   },
