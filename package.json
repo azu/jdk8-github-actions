@@ -1,12 +1,14 @@
 {
   "name": "@azu/jdk8-github-actions",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "jdk8-github-actions",
   "main": "index.js",
   "jdeploy": {
     "jar": "target/example-1.0.jar"
   },
-  "files": ["jdeploy-bundle"],
+  "files": [
+    "jdeploy-bundle"
+  ],
   "bin": {
     "command": "jdeploy-bundle/jdeploy.js"
   },
